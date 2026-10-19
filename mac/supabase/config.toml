@@ -1,0 +1,5 @@
+[functions.proxy-grab]
+verify_jwt = false
+
+[functions.proxy-test]
+verify_jwt = false
