@@ -338,7 +338,7 @@ function renderProxyPage() {
     try {
       const res = await fetch(`${PROXY_API}?type=${encodeURIComponent(type)}&html=1`, {
         headers: {
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
           'Content-Type': 'application/json',
         },
       })
@@ -406,7 +406,7 @@ function renderProxyPage() {
         const res = await fetch(PROXY_TEST_API, {
           method: 'POST',
           headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+            Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({ type, proxies: chunk }),
