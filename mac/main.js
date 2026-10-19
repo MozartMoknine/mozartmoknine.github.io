@@ -8,6 +8,7 @@ const SUPABASE_URL = 'https://kahnxhsqdjzbljfdytyw.supabase.co';
 
 const PROXY_API = `${SUPABASE_URL}/functions/v1/proxy-grab`;
 const PROXY_TEST_API = `${SUPABASE_URL}/functions/v1/proxy-test`;
+const SUPABASE_ANON_KEY = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImthaG54aHNxZGp6YmxqZmR5dHl3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI0Mzc4OTIsImV4cCI6MjEwODAxMzg5Mn0.kEATLNi97v6tkOP6X2uNDQ8p8cB8PPPXhbnqu_X_Xcg`
 
 const app = document.querySelector('#app')
 app.innerHTML = `
