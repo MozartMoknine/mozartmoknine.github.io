@@ -4,6 +4,11 @@
 /* App shell + navigation                                              */
 /* ------------------------------------------------------------------ */
 
+const SUPABASE_URL = 'https://kahnxhsqdjzbljfdytyw.supabase.co';
+
+const PROXY_API = `${SUPABASE_URL}/functions/v1/proxy-grab`;
+const PROXY_TEST_API = `${SUPABASE_URL}/functions/v1/proxy-test`;
+
 const app = document.querySelector('#app')
 app.innerHTML = `
   <header class="topbar">
@@ -219,8 +224,6 @@ function renderMacPage() {
 // browser CORS restrictions entirely. The function pulls from many free public
 // proxy list sources (TheSpeedX, monosans, ProxyScrape, proxy-list.download,
 // iplocate, Stormsia, MuRongPI and others) and returns a deduped ip:port list.
-const PROXY_API = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/proxy-grab`
-const PROXY_TEST_API = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/proxy-test`
 
 const PROXY_MAX_DISPLAY = 20000
 const PROXY_TEST_BATCH = 250 // proxies sent per test request to avoid huge payloads
